@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/logo_ms.png" type="image/png">
+  <title>MS Web Solutions - Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <div data-include="partials/header.html"></div>
+
+  <!-- Navegación -->
+  <div data-include="partials/nav.html"></div>
+
+  <main class="container">
+    <!-- Servicios -->
+    <section id="servicios">
+      <h2 class="section-title">Servicios Especializados</h2>
+      <p class="section-subtitle">Soluciones de software empresarial con arquitectura escalable</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon">🛰️</div>
+            <div class="service-info">
+              <h3>Sistema de Monitoreo GPS</h3>
+              <div class="service-category">Aplicación Web en Tiempo Real</div>
+            </div>
+          </div>
+          <p class="service-description">
+            Plataforma de seguimiento GPS con mapas interactivos, geofencing, alertas y reportes.
+          </p>
+          <div class="tech-stack">
+            <ul>
+              <li>.NET Core 8</li>
+              <li>ASP.NET Core Web API</li>
+              <li>Leaflet.js</li>
+              <li>SQL Server</li>
+              <li>SignalR</li>
+            </ul>
+          </div>
+          <div class="timeline">
+            <ul>
+              <li>Análisis y requerimientos</li>
+              <li>Desarrollo Backend y API</li>
+              <li>Desarrollo Frontend y mapas</li>
+              <li>Testing y QA</li>
+              <li>Deploy y documentación</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon">🔐</div>
+            <div class="service-info">
+              <h3>Sistema de Autenticación</h3>
+              <div class="service-category">Seguridad y Control de Acceso</div>
+            </div>
+          </div>
+          <p class="service-description">
+            Módulo robusto con JWT, MFA, roles y auditoría de accesos.
+          </p>
+          <div class="tech-stack">
+            <ul>
+              <li>ASP.NET Core Identity</li>
+              <li>JWT Bearer</li>
+              <li>BCrypt</li>
+              <li>LDAP/AD</li>
+            </ul>
+          </div>
+          <div class="timeline">
+            <ul>
+              <li>Diseño de seguridad</li>
+              <li>Implementación de Auth Core</li>
+              <li>Integración LDAP/SOAP</li>
+              <li>Pruebas de seguridad</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon">📊</div>
+            <div class="service-info">
+              <h3>Dashboard Analítico</h3>
+              <div class="service-category">Business Intelligence</div>
+            </div>
+          </div>
+          <p class="service-description">
+            KPIs dinámicos, gráficos interactivos, filtros y exportación de reportes.
+          </p>
+          <div class="tech-stack">
+            <ul>
+              <li>Chart.js</li>
+              <li>D3.js</li>
+              <li>LINQ</li>
+              <li>EPPlus</li>
+              <li>iTextSharp</li>
+            </ul>
+          </div>
+          <div class="timeline">
+            <ul>
+              <li>Definición de KPIs</li>
+              <li>ETL y preparación de datos</li>
+              <li>Construcción de gráficos</li>
+              <li>Optimización de performance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tecnologías -->
+    <section id="tecnologias" class="tech-stack">
+      <h2 class="section-title">Tecnologías y Herramientas</h2>
+      <ul>
+        <li><strong>Backend:</strong> .NET Core, Laravel, Node.js</li>
+        <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Angular</li>
+        <li><strong>Base de datos:</strong> SQL Server, MySQL</li>
+        <li><strong>DevOps:</strong> Git, GitHub Pages, Docker</li>
+        <li><strong>APIs:</strong> RESTful, OpenStreetMap</li>
+      </ul>
+    </section>
+
+    <!-- Proceso de Desarrollo -->
+    <section id="timeline" class="timeline">
+      <h2 class="section-title">Proceso de Desarrollo</h2>
+      <ul>
+        <li>1. Reunión inicial: objetivos y alcance</li>
+        <li>2. Propuesta: cotización y plan</li>
+        <li>3. Diseño: UI/UX y arquitectura</li>
+        <li>4. Desarrollo: backend y frontend</li>
+        <li>5. Pruebas: unitarias e integración</li>
+        <li>6. Entrega: deploy y documentación</li>
+      </ul>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="about">
+      <h2 class="section-title">Sobre mí</h2>
+      <p>
+        Soy Moisés Brian Salas Chuque, desarrollador full stack especializado en proyectos de logística, monitoreo GPS, autenticación y dashboards analíticos. Uso Clean Architecture, .NET Core, Angular y más.
+      </p>
+    </section>
+
+    <!-- Precios -->
+    <section id="precios">
+      <h2 class="section-title">Inversión en Desarrollo</h2>
+      <p class="section-subtitle">Costos según nivel de funcionalidad y complejidad</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-title">🛰️ Monitoreo GPS</div>
+          <p class="pricing-description">Plataforma completa para seguimiento y alertas.</p>
+          <span class="pricing-level">Básico: Consultar – S/7,000</span>
+          <span class="pricing-level">Intermedio: S/8,000 – S/10,000</span>
+          <span class="pricing-level">Avanzado: S/12,000 – S/15,000</span>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-title">🔐 Autenticación</div>
+          <p class="pricing-description">Seguridad, roles y auditoría de accesos.</p>
+          <span class="pricing-level">Básico: Consultar – S/3,000</span>
+          <span class="pricing-level">Intermedio: S/4,000 – S/5,500</span>
+          <span class="pricing-level">Avanzado: S/6,000 – S/7,500</span>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-title">📊 Dashboard</div>
+          <p class="pricing-description">Gráficos interactivos y reportes exportables.</p>
+          <span class="pricing-level">Básico: Consultar – S/4,000</span>
+          <span class="pricing-level">Intermedio: S/5,000 – S/6,500</span>
+          <span class="pricing-level">Avanzado: S/7,000 – S/9,000</span>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-title">🧑‍💻 Consultoría</div>
+          <p class="pricing-description">Asesoría técnica, mejoras y soporte.</p>
+          <span class="pricing-level">Básico: S/50 – S/70/hr</span>
+          <span class="pricing-level">Intermedio: S/80 – S/100/hr</span>
+          <span class="pricing-level">Avanzado: S/110 – S/130/hr</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div data-include="partials/footer.html"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -2,100 +2,100 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>¡Invitación Especial!</title>
+  <title>Invitación Concierto Bad Bunny</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(135deg, #ff70a6, #ff9770, #ffd670, #e9ff70);
-      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(115deg, #ff70a6 0%, #ff9770 50%, #ffd670 100%, #e9ff70 120%);
+      font-family: 'Montserrat', sans-serif;
+      height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
       margin: 0;
-      overflow: hidden;
     }
     .card {
-      background: rgba(255,255,255,0.9);
-      border-radius: 15px;
-      padding: 2.5em;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.90);
+      border-radius: 20px;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.12);
+      max-width: 370px;
+      padding: 2.5em 2em 2em 2em;
       text-align: center;
-      max-width: 350px;
       position: relative;
+      animation: float 2.5s ease-in-out infinite alternate;
+    }
+    @keyframes float {
+      to { transform: translateY(-15px); }
+    }
+    .bunny {
+      font-size: 3em;
+      margin-bottom: 0.4em;
+      animation: bunnyPop 1.2s infinite alternate;
+    }
+    @keyframes bunnyPop {
+      to { transform: scale(1.12); }
     }
     h1 {
       color: #ff70a6;
-      margin-bottom: 1em;
+      font-size: 1.6em;
+      margin-bottom: 0.6em;
+      font-weight: 700;
     }
-    .bunny {
-      font-size: 2.5em;
-      margin-bottom: 0.5em;
+    .mensaje {
+      color: #555;
+      font-size: 1.08em;
+      margin-bottom: 1.5em;
+    }
+    .botones {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin-top: 1.1em;
     }
     .btn {
-      background: #ff70a6;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      background: linear-gradient(90deg,#ff70a6 60%, #ffd670 120%);
       color: white;
-      padding: 0.8em 2em;
       border: none;
-      border-radius: 25px;
-      font-size: 1em;
+      border-radius: 28px;
+      padding: 0.7em 2.2em;
+      font-size: 1.15em;
       cursor: pointer;
-      margin: 1em 1em 0 1em;
-      transition: background 0.3s;
-      display: inline-block;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      transition: background 0.25s, transform 0.15s;
+      outline: none;
       position: relative;
     }
     .btn:hover {
-      background: #ffd670;
+      background: linear-gradient(90deg,#ffd670 40%, #ff70a6 100%);
       color: #ff70a6;
-    }
-    #noBtn {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 60%;
+      transform: scale(1.08);
     }
   </style>
 </head>
 <body>
-  <div class="card" id="card">
-    <div class="bunny">🐰🎤</div>
-    <h1>¡Hola mi amor!</h1>
-    <p>
-      Te invito a un concierto virtual de <strong>Bad Bunny</strong> mañana,<br>
-      <strong>20 de septiembre</strong> en <strong>mi casa</strong>.
-    </p>
-    <p>
-      Ven lista para cantar, bailar y disfrutar juntos.<br>
-      <em>¡Solo tú y yo!</em>
-    </p>
-    <button class="btn" onclick="responder('si')">Sí, acepto 💖</button>
-    <button class="btn" id="noBtn" onclick="responder('no')">No puedo 😢</button>
+  <div class="card">
+    <div class="bunny">🐰🎶</div>
+    <h1>¡Invitación Especial!</h1>
+    <div class="mensaje">
+      Te invito a un concierto virtual de <b>Bad Bunny</b> <br>
+      <b>mañana, 20 de septiembre</b> en <b>mi casa</b>.<br><br>
+      ¿Quieres acompañarme y disfrutar juntos?
+    </div>
+    <div class="botones">
+      <button class="btn" onclick="responder('si')">Sí</button>
+      <button class="btn" onclick="responder('no')">No</button>
+    </div>
   </div>
   <script>
     function responder(opcion) {
       if(opcion === 'si') {
-        alert('¡Me haces muy feliz, amor! Nos vemos en el concierto 🥰');
+        alert('¡Me alegra mucho! Prepararé todo para ti. 💖');
       } else {
-        alert('No acepto un no, mamasita 😏🎶');
+        alert('¡No acepto un no, mamasita! 😏🎶');
       }
     }
-
-    // Mover el botón "No puedo" cuando el mouse se acerca
-    const noBtn = document.getElementById('noBtn');
-    noBtn.addEventListener('mouseenter', function() {
-      // Obtener dimensiones del card
-      const card = document.getElementById('card');
-      const cardRect = card.getBoundingClientRect();
-      // Generar nueva posición dentro del card
-      const maxX = cardRect.width - noBtn.offsetWidth;
-      const maxY = cardRect.height - noBtn.offsetHeight;
-      const randX = Math.random() * maxX;
-      const randY = Math.random() * (maxY - 100) + 100; // deja espacio arriba para el texto
-
-      noBtn.style.left = randX + 'px';
-      noBtn.style.top = randY + 'px';
-    });
   </script>
 </body>
 </html>
